@@ -1,0 +1,11 @@
+.venv
+node_modules
+__pycache__
+.next
+.git
+*.pptx
+*.pdf
+*.jpg
+*.md
+*.html
+trustlens

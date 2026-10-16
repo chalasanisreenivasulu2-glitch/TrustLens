@@ -1,0 +1,5 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; }
+body { background: #f5f7f2; }
+button, textarea, select, input { font: inherit; }
+button:focus-visible, textarea:focus-visible, select:focus-visible, label:focus-within { outline: 3px solid rgba(57, 145, 107, .25); outline-offset: 2px; }
