@@ -1,4 +1,4 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 import os
 import tempfile
@@ -21,7 +21,13 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],
+    allow_origins=[
+        "http://localhost:3000",
+        "http://127.0.0.1:3000",
+        "http://localhost:8081",
+        "http://127.0.0.1:8081",
+        "https://trustlens-dashboard-993487022253.us-central1.run.app",
+    ],
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -35,8 +41,8 @@ class AnalyzeTextRequest(BaseModel):
     language: str = Field(default="en", min_length=2, max_length=16)
 
 
-@app.get("/healthz")
-def healthz() -> dict[str, str]:
+@app.get("/health")
+def health() -> dict[str, str]:
     return {"status": "ok"}
 
 
@@ -113,3 +119,4 @@ if __name__ == "__main__":
 #   -F 'message=Your refund is pending. Share your OTP.' \
 #   -F 'language=en' \
 #   -F 'screenshot=@./screenshot.png'
+

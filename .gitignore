@@ -1,9 +1,40 @@
+﻿
+
+@"
+# Python
 .venv/
-node_modules/
-.next/
 __pycache__/
 *.pyc
 .env
-.env.*
-*.json.key
-application_default_credentials.json
+.env.local
+
+# Node
+node_modules/
+.next/
+npm-debug.log*
+
+# Build artifacts
+*.log
+dist/
+build/
+
+# Docker
+# GCP / secrets
+*.json
+!package.json
+!package-lock.json
+!tsconfig.json
+service-account*.json
+gcloud-credentials*.json
+*.pem
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Large binaries (keep in repo only if judges need them)
+*.zip
+*.tar.gz
+"@ | Set-Content -Path .gitignore -Encoding UTF8
