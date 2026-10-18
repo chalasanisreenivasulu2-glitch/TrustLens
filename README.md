@@ -115,9 +115,12 @@ The reference implementation is intentionally bounded to a maximum of five model
 ├── TrustLens APAC_ Judges' Guide.md
 ├── TrustLens APAC_ Architecture and Sequence.md
 ├── TrustLens APAC_ Responsible AI and Privacy.md
-├── TrustLens APAC_ Evaluation Plan.md
-├── TrustLens APAC_ Submission Checklist.md
-├── TrustLens APAC_ Three-Minute Demo Script.md
+├── README.md
+├── app.py # FastAPI backend
+├── trustlens_pipeline.py # Bounded Gemini orchestration
+├── requirements.txt # Backend dependencies
+├── Dockerfile # Backend container image
+├── deploy-cloud-run.sh # Deployment script
 └── trustlens-dashboard/
 ├── Dockerfile # Nginx container image
 ├── index.html # Redirect to live_product.html
@@ -127,4 +130,6 @@ The reference implementation is intentionally bounded to a maximum of five model
 ├── impact.html
 ├── genai_depth.html
 └── responsible_ai.html
+
+
 
