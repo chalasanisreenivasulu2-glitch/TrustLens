@@ -100,3 +100,31 @@ The reference implementation is intentionally bounded to a maximum of five model
 - Vertex AI for Gemini inference
 
 ## Repository Structure
+├── README.md
+├── app.py # FastAPI backend
+├── trustlens_pipeline.py # Bounded Gemini orchestration
+├── requirements.txt # Backend dependencies
+├── Dockerfile # Backend container image
+├── cloudrun-service.yaml # Cloud Run manifest template
+├── deploy-cloud-run.sh # Direct gcloud deployment
+├── deploy-trustlens-end-to-end.ps1 # End-to-end PowerShell automation
+├── bootstrap-github-wif.ps1 # WIF bootstrap helper
+├── package.json # Next.js scaffold (not deployed)
+├── next.config.js
+├── tsconfig.json
+├── TrustLens APAC_ Judges' Guide.md
+├── TrustLens APAC_ Architecture and Sequence.md
+├── TrustLens APAC_ Responsible AI and Privacy.md
+├── TrustLens APAC_ Evaluation Plan.md
+├── TrustLens APAC_ Submission Checklist.md
+├── TrustLens APAC_ Three-Minute Demo Script.md
+└── trustlens-dashboard/
+├── Dockerfile # Nginx container image
+├── index.html # Redirect to live_product.html
+├── live_product.html # Dashboard UI + live API test button
+├── problem.html
+├── solution.html
+├── impact.html
+├── genai_depth.html
+└── responsible_ai.html
+
